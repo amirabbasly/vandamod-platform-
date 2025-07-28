@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss"; /* اگر از Tailwind CSS استفاده می‌کنید */
 
 /* ----------- 🌸 اسکرول‌بار سفارشی (صورتی و نازک) ----------- */
 ::-webkit-scrollbar {
@@ -28,7 +28,6 @@
 }
 
 /* ----------- 🕶️ کلاس مخفی‌کردن اسکرول‌بار ----------- */
-/* استفاده: className="scrollbar-hide overflow-y-auto" */
 .scrollbar-hide {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -44,15 +43,16 @@
   --foreground: #171717;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans, Arial, sans-serif);
+  --font-sans: 'Vazirmatn', Arial, sans-serif; /* فونت اصلی */
   --font-mono: var(--font-geist-mono, monospace);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* بارگذاری فونت‌های محلی */
+@font-face {
+  font-family: 'Vazirmatn'; /* نام فونت */
+  src: url('/fonts/iranyekan/IRANYekanRegularFaNum.ttf') format('truetype'); /* مسیر به فایل فونت */
+  font-weight: 400; /* وزن فونت */
+  font-style: normal; /* سبک فونت */
 }
 
 /* ----------- 🧱 تنظیمات پایه HTML و Body ----------- */
@@ -62,5 +62,17 @@ body {
   padding: 0;
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-sans); /* استفاده از فونت‌های اصلی */
+}
+
+/* اطمینان از استفاده از فونت در همه عناصر */
+h1, h2, h3, p, span, div {
   font-family: var(--font-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
