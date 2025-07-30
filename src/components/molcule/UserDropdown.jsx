@@ -66,7 +66,7 @@ const UserDropdown = () => {
             </li>
             <li>
               <Link
-                href="/Dashboard"
+                href="/Profile"
                 className="flex items-center justify-end gap-2 px-4 py-2 hover:bg-gray-100 transition"
               >
                 <span>حساب کاربری</span>

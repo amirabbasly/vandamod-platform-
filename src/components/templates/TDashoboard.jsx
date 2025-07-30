@@ -185,8 +185,8 @@ const getSlugForPermission = (name) => {
     تنظیمات: "settings",
     سایر: "others",
     محصولات: "products",
-    "محصول جدید": "new-product",
-    "همه محصولات": "all-products",
+    "محصول جدید": "NewProduct",
+    "همه محصولات": "AllProducts",
     "همه محصول": "all-products",
     "دسته بندی محصولات": "product-categories",
     "پیکربندی محصولات": "product-configurations",
@@ -215,7 +215,7 @@ const getSlugForPermission = (name) => {
     "نمای سایت": "site-view",
     "صفحه اصلی": "home-page",
     فوتر: "footer",
-    دپارتمان: "departments",
+    دپارتمان: "Department",
     پیامک: "sms",
   };
   return slugMap[name] || name.toLowerCase().replace(/\s+/g, "-");
@@ -534,7 +534,7 @@ const TDashoboard = () => {
                   },
                 },
               }}
-              height={320}
+              height={120}
             />
           </div>
           {/* Stats */}
